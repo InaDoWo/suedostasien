@@ -10,7 +10,7 @@
     display: inline;
 }
 .container {
-    margin-top: 10%;
+    margin-top: 1%;
 }
 .bannerImage {
     width: 100%;
@@ -18,10 +18,31 @@
 .menu a{
     color: #ffffff;
 }
+.menu a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
 .thumb{
   width: 80%;
   margin-left: 10%;
+  height: 200px;
 }
 .thumbDescription{
   margin-left: 10%;
+}
+.thumbDescription a {
+  color: 	#808080;
+}
+.thumbDescription a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+.hardfacts h1 {
+  margin-left: 6%;
+  margin-bottom: 1%
+}
+.hardfacts .col-md-6 p {
+  width: 80%;
+  margin-left: 10%;
+  height: 200px;
 }

@@ -2,5 +2,7 @@
 
 // Define the `phonecatApp` module
 angular.module('myApp', [
-  'home'
+  'ngRoute',
+  'home',
+  'countryDetail'
 ]);

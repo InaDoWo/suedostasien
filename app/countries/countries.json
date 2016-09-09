@@ -1,6 +1,5 @@
 [{
     "name": "Brunei",
-    "imageUrl": "images/countries/bn.jpg",
     "topLevelDomain": [".bn"],
     "alpha2Code": "BN",
     "alpha3Code": "BRN",
@@ -29,7 +28,6 @@
     "nativeName": "Negara Brunei Darussalam"
 }, {
     "name": "Cambodia",
-    "imageUrl": "images/countries/kn.jpg",
     "topLevelDomain": [".kh"],
     "alpha2Code": "KH",
     "alpha3Code": "KHM",
@@ -282,7 +280,6 @@
     "nativeName": "Timor-Leste"
 }, {
     "name": "Vietnam",
-    "imageUrl": "images/countries/vn.jpg", 
     "topLevelDomain": [".vn"],
     "alpha2Code": "VN",
     "alpha3Code": "VNM",

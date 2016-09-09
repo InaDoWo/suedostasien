@@ -7,9 +7,13 @@
 
     <div class="row">
         <div class="col-md-6" ng-repeat="country in $ctrl.countries | filter:$ctrl.query">
-            <img class="thumb" ng-src="{{country.imageUrl}}" alt="{{country.name}}" />
+            <a href="#!/countries/countries/{{country.alpha2Code}}">
+            <img class="thumb" ng-src="images/{{country.alpha2Code}}.jpg" alt="{{country.name}}" />
+            </a>
             <div class="thumbDescription">
-                <p>{{country.name}}</p>
+                <a href="#!/countries/countries/{{country.alpha2Code}}">
+                <p>{{country.translations.de}}</p>
+                </a>
             </div>
         </div>
     </div>
