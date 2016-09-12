@@ -4,5 +4,6 @@
 angular.module('myApp', [
   'ngRoute',
   'home',
-  'countryDetail'
+  'countryDetail',
+  'core'
 ]);

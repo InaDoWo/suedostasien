@@ -1,17 +1,23 @@
-<img class="bannerImage" ng-src="images/{{$ctrl.country.alpha2Code}}.jpg" alt="{{$ctrl.country.name}}" />
+<!-- <img class="bannerImage" ng-src="images/{{$ctrl.country.alpha2Code}}.jpg" alt="{{$ctrl.country.name}}" /> -->
 <div class="container">
     <div class="row hardfacts">
         <h1>{{$ctrl.country.translations.de}}</h1>
         <div class="col-md-6">
-            <p>
-                Hauptstadt: {{$ctrl.country.capital}}
-            </p>
+            <ul>
+                <li>Hauptstadt: {{$ctrl.country.capital}}</li>
+                <li>Vorwahl: +{{$ctrl.country.callingCodes[0]}}</li>
+                <li>Währung: {{$ctrl.country.currencies[0]}}</li>
+                <li>Wetter in {{$ctrl.country.capital}}: {{$ctrl.weather.list[0].main.temp}} Grad, {{$ctrl.weather.list[0].weather[0].description}}</li>
+            </ul>
+
         </div>
+
         <div class="col-md-6">
-            <p>
-                Bevölkerung: {{$ctrl.country.population}}
-            </p>
+            <ul>
+                <li>Bevölkerung: {{$ctrl.country.population}} Einwohner</li>
+                <li>Nativer Name: {{$ctrl.country.nativeName}}</li>
+                <li>Zeitunterschied zwischen Deutschland und {{$ctrl.country.translations.de}}: {{$ctrl.country.timezones[0] | timedifference}} Stunden</li>
+            </ul>
         </div>
     </div>
-
 </div>
