@@ -1,9 +1,11 @@
-<img class="bannerImage" src="https://www.seasiatravel.com/images/thailand1.jpg" alt="Thailand" />
+<!-- <img class="bannerImage" src="https://www.seasiatravel.com/images/thailand1.jpg" alt="Thailand" /> -->
+
 <div class="container">
-    Search:
+  <div class="search">
+    <span class="searchTitle">Suche: </span>
+
     <input ng-model="$ctrl.query" />
-</div>
-<div class="container">
+  </div>
 
     <div class="row">
         <div class="col-md-6" ng-repeat="country in $ctrl.countries | filter:$ctrl.query">
