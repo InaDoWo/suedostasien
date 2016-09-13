@@ -14,9 +14,10 @@
 
         <div class="col-md-6">
             <ul>
-                <li>Bevölkerung: {{$ctrl.country.population}} Einwohner</li>
+                <li>Bevölkerung: {{$ctrl.country.population | population}} Einwohner</li>
                 <li>Nativer Name: {{$ctrl.country.nativeName}}</li>
                 <li>Zeitunterschied zwischen Deutschland und {{$ctrl.country.translations.de}}: {{$ctrl.country.timezones[0] | timedifference}} Stunden</li>
+                <!-- <li>Sonnenaufgang: {{$ctrl.sun.results.sunrise}}</li> -->
             </ul>
         </div>
     </div>

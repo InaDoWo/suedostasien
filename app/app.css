@@ -15,7 +15,13 @@
 .bannerImage {
     width: 100%;
 }
-.menu a{
+.menu a:link {
+    color: #ffffff;
+}
+.menu a:visited {
+    color: #ffffff;
+}
+.menu a:active {
     color: #ffffff;
 }
 .menu a:hover {
