@@ -1,42 +1,52 @@
-'use strict';
-
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
-
 describe('my app', function() {
-
-
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
+  it('should redirect `index.html` to `index.html#!/countries/countries', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
+    expect(browser.getLocationAbsUrl()).toBe('/home');
   });
 
-
-  describe('view1', function() {
+  describe('home', function() {
 
     beforeEach(function() {
-      browser.get('index.html#!/view1');
+      browser.get('index.html');
     });
 
 
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+    it('should filter the country list as a user types into the search box', function() {
+      var countryList = element.all(by.repeater('country in $ctrl.countries'));
+      var query = element(by.model('$ctrl.query'));
+
+      expect(countryList.count()).toBe(11);
+
+      query.sendKeys('vietnam');
+      expect(countryList.count()).toBe(1);
+
+      query.clear();
+      query.sendKeys('Brunei');
+      expect(countryList.count()).toBe(1);
+      query.clear();
+      query.sendKeys('Indien');
+      expect(countryList.count()).toBe(0);
     });
+    it('should render country specific links', function() {
+      var query = element(by.model('$ctrl.query'));
+      query.sendKeys('Brunei');
+
+      element.all(by.css('.thumbDescription a')).first().click();
+      expect(browser.getLocationAbsUrl()).toBe('/countries/countries/BN');
+    });
+
 
   });
+  describe('View: Country details', function() {
 
-
-  describe('view2', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#!/view2');
-    });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
-    });
-
+  beforeEach(function() {
+    browser.get('index.html#!/countries/countries/BN');
   });
+
+  it('should display country with title `translations.de`', function() {
+    expect(element(by.binding('$ctrl.country.translations.de')).getText()).toBe('Brunei');
+  });
+
+});
+
 });

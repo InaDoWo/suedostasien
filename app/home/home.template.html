@@ -1,20 +1,19 @@
 <!-- <img class="bannerImage" src="https://www.seasiatravel.com/images/thailand1.jpg" alt="Thailand" /> -->
 
 <div class="container">
-  <div class="search">
-    <span class="searchTitle">Suche: </span>
-
-    <input ng-model="$ctrl.query" />
-  </div>
+    <div class="search">
+        <span class="searchTitle">Suche: </span>
+        <input ng-model="$ctrl.query" />
+    </div>
 
     <div class="row">
         <div class="col-md-6" ng-repeat="country in $ctrl.countries | filter:$ctrl.query">
             <a href="#!/countries/countries/{{country.alpha2Code}}">
-            <img class="thumb" ng-src="images/{{country.alpha2Code}}.jpg" alt="{{country.name}}" />
+                <img class="thumb" ng-src="images/{{country.alpha2Code}}.jpg" alt="{{country.name}}" />
             </a>
             <div class="thumbDescription">
                 <a href="#!/countries/countries/{{country.alpha2Code}}">
-                <p>{{country.translations.de}}</p>
+                    <p>{{country.translations.de}}</p>
                 </a>
             </div>
         </div>
