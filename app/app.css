@@ -45,7 +45,8 @@
     text-decoration: none;
 }
 .hardfacts h1 {
-  margin-bottom: 1%
+  margin-bottom: 1%;
+  padding-left: 15px;
 }
 .hardfacts .col-md-6 p {
   width: 80%;
@@ -58,4 +59,7 @@
 }
 .search {
   color: 	#808080;
+}
+.space{
+  height: 50px;
 }

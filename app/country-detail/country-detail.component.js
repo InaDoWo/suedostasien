@@ -14,7 +14,16 @@ component('countryDetail', {
             // $http.get('http://api.sunrise-sunset.org/json?lat=' + $routeParams.lat + '&lng=' + $routeParams.lng).then(function(response) {
             //     self.sun = response.data;
             // });
+            self.master = {};
 
+            self.update = function(user) {
+                self.master = angular.copy(user, self.master);
+            };
+
+            self.reset = function() {
+                self.user = angular.copy(self.master);
+            };
+            self.reset();
         }
     ]
 });
