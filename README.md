@@ -1,4 +1,4 @@
-# Countries Southeastasia - Angulat.JS
+# Countries Southeastasia - Angular.js
 
 This is an example app to use angular.js with e2e and unit tests.
 You can click on one of the countries to get more information about the capital, dialling code, currency, weather, population, native name and time difference to Germany.
