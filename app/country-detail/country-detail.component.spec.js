@@ -12,7 +12,7 @@ describe('countryDetail', function() {
       $httpBackend.expectGET('https://restcountries.eu/rest/v1/alpha/de').respond({name: 'Germany'});
 
       $routeParams.countryAlpha2Code = 'de';
-      $httpBackend.expectGET('http://api.openweathermap.org/data/2.5/forecast/city?q=Berlin&lang=de&units=metric&APPID=a39a0395d8d318e22241cf4a05cf50e2').respond({name : 'Berlin'});
+      $httpBackend.expectGET('http://api.openweathermap.org/data/2.5/weather?q=Berlin&lang=de&units=metric&APPID=a39a0395d8d318e22241cf4a05cf50e2').respond({name : 'Berlin'});
 
       $routeParams.capital = 'Berlin';
 
